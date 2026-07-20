@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký — GUMI Coffee n Chill</title>
+  <link rel="stylesheet" href="css/style.css?v=25" />
+</head>
+<body>
+  <main class="auth-page auth-page--register">
+    <div class="auth-hero auth-hero--register container">
+      <a class="auth-brand" href="index.html">
+        <img src="assets/images/logo/main-logo.jpg" alt="GUMI — Coffee n Chill" />
+      </a>
+
+      <section class="auth-card auth-card--register">
+        <h1 class="auth-card__title">Create your account</h1>
+        <form class="auth-form" data-auth="register" novalidate>
+          <label class="field">
+            <span class="field__label">Fullname</span>
+            <span class="field__control">
+              <svg class="field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+              <input type="text" name="fullname" placeholder="Enter your fullname" required aria-label="Fullname" />
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Username</span>
+            <span class="field__control">
+              <svg class="field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+              <input type="text" name="username" placeholder="Enter your username" required aria-label="Username" />
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Email</span>
+            <span class="field__control">
+              <svg class="field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
+              <input type="email" name="email" placeholder="Enter your mail" required aria-label="Email" />
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Password</span>
+            <span class="field__control">
+              <svg class="field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+              <input type="password" name="password" placeholder="Enter your password" required aria-label="Password" />
+              <button type="button" class="field__toggle" data-password-toggle aria-label="Hiện hoặc ẩn mật khẩu">
+                <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" /><circle cx="12" cy="12" r="3" /></svg>
+                <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10 10 0 0 1 12 20c-7 0-11-8-11-8a18 18 0 0 1 5.06-5.94M9.9 4.24A9 9 0 0 1 12 4c7 0 11 8 11 8a18 18 0 0 1-2.16 3.19" /><path d="M1 1l22 22" /></svg>
+              </button>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Confirm password</span>
+            <span class="field__control">
+              <svg class="field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+              <input type="password" name="confirm" placeholder="Confirm your password" required aria-label="Confirm password" />
+              <button type="button" class="field__toggle" data-password-toggle aria-label="Hiện hoặc ẩn mật khẩu">
+                <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" /><circle cx="12" cy="12" r="3" /></svg>
+                <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10 10 0 0 1 12 20c-7 0-11-8-11-8a18 18 0 0 1 5.06-5.94M9.9 4.24A9 9 0 0 1 12 4c7 0 11 8 11 8a18 18 0 0 1-2.16 3.19" /><path d="M1 1l22 22" /></svg>
+              </button>
+            </span>
+          </label>
+
+          <label class="auth-agree">
+            <input type="checkbox" name="agree" required />
+            <span>I agree to the Term of Service and Privacy Policy.</span>
+          </label>
+
+          <button type="submit" class="auth-btn auth-btn--primary">Sign up</button>
+        </form>
+
+        <p class="auth-switch">Already have an account?</p>
+        <a class="auth-btn auth-btn--secondary" href="login.html">Login</a>
+        <p class="form-status form-status--dark" data-auth-status role="status"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <span>Coffee n Chill</span>
+          <span>GUMI</span>
+        </a>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" /></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.3 8h4.4v13H.3V8zm7 0h4.2v1.8h.06c.6-1.1 2-2.2 4.14-2.2 4.43 0 5.25 2.9 5.25 6.7V21h-4.4v-6c0-1.4 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21H7.3V8z" /></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z" /></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.26 2.2.43.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .43 2.2.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.26 1.8-.43 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.43-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.26-2.2-.43-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.43-2.2-.07-1.3-.07-1.7-.07-4.9s0-3.6.07-4.9c.06-1.2.26-1.8.43-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.43 1.3-.07 1.7-.07 4.9-.07zm0 3.5A6.3 6.3 0 1 0 18.3 12 6.3 6.3 0 0 0 12 5.7zm0 10.4A4.1 4.1 0 1 1 16.1 12 4.1 4.1 0 0 1 12 16.1zm6.5-10.9a1.47 1.47 0 1 1-1.5-1.5 1.47 1.47 0 0 1 1.5 1.5z" /></svg></a>
+        </div>
+      </div>
+      <div class="footer-about">
+        <h3>About us</h3>
+        <ul>
+          <li>📞 0825944313</li>
+          <li>✉️ Gumicoffee@gmail.com</li>
+          <li>📍 Nguyễn Văn Cừ Nối Dài, Cần Thơ</li>
+          <li><a href="contact.html">Liên hệ với chúng tôi &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="footer-news">
+        <h3>Reviews &amp; Testimonials</h3>
+        <p>Hãy để lại thông tin của bạn ở đây:</p>
+        <form data-newsletter novalidate>
+          <input type="email" name="email" placeholder="Nhập email của bạn..." required aria-label="Email" />
+          <button type="submit">Submit</button>
+        </form>
+        <p class="form-status" role="status"></p>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-year></span> GUMI Coffee n Chill. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=25" defer></script>
+</body>
+</html>
