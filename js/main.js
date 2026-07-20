@@ -148,6 +148,7 @@ function initContactForm() {
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
       message: formData.get("message"),
+      phone: formData.get("phone"),
     };
 
     status.textContent = "Đang gửi...";
