@@ -128,14 +128,14 @@ function initMenu() {
   renderMenu();
 }
 
-const APPS_SCRIPT_URL = "DÁN_WEB_APP_URL_CỦA_BẠN_VÀO_ĐÂY";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6rbGq4t4lWk82lEtzty7bPpvwURbaOd2WPSFC5TtZR7n4Nol27wguAmG4-tHh21n_/exec";
 
 function initContactForm() {
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
   if (!form || !status) return;
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!form.checkValidity()) {
@@ -152,17 +152,20 @@ function initContactForm() {
 
     status.textContent = "Đang gửi...";
 
-    fetch(APPS_SCRIPT_URL, {
-      method: "POST",
-      body: JSON.stringify(payload),
-    })
-      .then(() => {
-        status.textContent = "Cảm ơn bạn! Tin nhắn của bạn đã được ghi nhận.";
-        form.reset();
-      })
-      .catch(() => {
-        status.textContent = "Gửi thất bại, vui lòng thử lại sau.";
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
+
+      status.textContent = "Cảm ơn bạn! Tin nhắn của bạn đã được ghi nhận.";
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      status.textContent = "Gửi thất bại, vui lòng thử lại sau.";
+    }
   });
 }
 
