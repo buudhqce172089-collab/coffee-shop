@@ -128,6 +128,8 @@ function initMenu() {
   renderMenu();
 }
 
+const APPS_SCRIPT_URL = "DÁN_WEB_APP_URL_CỦA_BẠN_VÀO_ĐÂY";
+
 function initContactForm() {
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -141,8 +143,26 @@ function initContactForm() {
       return;
     }
 
-    status.textContent = "Cảm ơn bạn! Tin nhắn của bạn đã được ghi nhận.";
-    form.reset();
+    const formData = new FormData(form);
+    const payload = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      message: formData.get("message"),
+    };
+
+    status.textContent = "Đang gửi...";
+
+    fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(payload),
+    })
+      .then(() => {
+        status.textContent = "Cảm ơn bạn! Tin nhắn của bạn đã được ghi nhận.";
+        form.reset();
+      })
+      .catch(() => {
+        status.textContent = "Gửi thất bại, vui lòng thử lại sau.";
+      });
   });
 }
 
